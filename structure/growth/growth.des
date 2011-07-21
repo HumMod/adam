@@ -21,10 +21,6 @@
   </variables>
 
   <definitions>  
-    <block>
-      <name>parms</name>
-      <call>fluids.fluid_adjustment</call>
-    </block>
     
     <block>
       <name>dervs</name>
