@@ -146,7 +146,7 @@
       
       <yaxis>
         <yvar>
-          <name>heart.total_peripheral_resistance</name>
+          <name>autoregulation.total_peripheral_resistance</name>
           <label>TPR</label>
           <linecolor>RED</linecolor>
         </yvar>
