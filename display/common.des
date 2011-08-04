@@ -1,3 +1,15 @@
 <!-- 
   display/common.des
 -->
+
+<maplist>
+  <name>common.kidney</name>
+  <map>
+    <val>0</val>
+    <img>RFC</img>
+  </map>
+  <map>
+    <val>1</val>
+    <img>GFR</img>
+  </map>
+</maplist>

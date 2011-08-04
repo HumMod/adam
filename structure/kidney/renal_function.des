@@ -32,6 +32,15 @@
     </var>
     
     <var>
+      <name>rfc_uo</name>
+    </var>
+    
+    <var>
+      <name>gfr_uo</name>
+      <val>1</val>
+    </var>
+    
+    <var>
       <name>age_shift</name>
     </var>
     
@@ -95,9 +104,17 @@
       </def>
       
       <def>
-        <name>urine_output</name>
+        <name>rfc_uo</name>
         <val>basic_urine_output * multiplier / baroreceptor_reflex.sympathetics</val>
       </def>
+      
+      <conditional>
+        <name>urine_output</name>
+        <test>kidney_function.isGFR</test>
+        <true>gfr_uo</true>
+        <false>rfc_uo</true>
+      </conditional>
+      
     </block>
   </definitions>
   
