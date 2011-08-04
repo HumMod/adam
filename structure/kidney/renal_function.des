@@ -112,7 +112,7 @@
         <name>urine_output</name>
         <test>kidney_function.isGFR</test>
         <true>gfr_uo</true>
-        <false>rfc_uo</true>
+        <false>rfc_uo</false>
       </conditional>
       
     </block>
