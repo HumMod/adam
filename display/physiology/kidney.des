@@ -99,7 +99,7 @@
     <row>2.0</row>
     <col>3.0</col>
     <name>index</name>
-    <listname>common.gender</listname>
+    <listname>common.kidney</listname>
     <label>Kidney Function</label>
   </radiobuttons>
 </panel>

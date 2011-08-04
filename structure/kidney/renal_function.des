@@ -107,7 +107,7 @@
         <name>multiplier</name>
         <val> 5 ^ ( adjusted_rpp + 35 / 100 - 1 )  - .75</val>
       </def>
-      
+   <!--   
       <def>
         <name>rfc_uo</name>
         <val>basic_urine_output * multiplier / baroreceptor_reflex.sympathetics</val>
@@ -119,7 +119,12 @@
         <true>gfr_uo</true>
         <false>rfc_uo</false>
       </conditional>
+      -->
       
+      <def>
+        <name>urine_output</name>
+        <val>basic_urine_output * multiplier / baroreceptor_reflex.sympathetics</val>
+      </def>
     </block>
   </definitions>
   
