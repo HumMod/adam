@@ -81,8 +81,6 @@
     </showgraph>
   </groupbox>
   
-  <structurename>kidney_function</structurename>
-  
   <checkmark>
     <row>2.4</row>
     <col>1.0</col>
@@ -93,7 +91,7 @@
   <checkmark>
     <row>3.4</row>
     <col>1.0</col>
-    <name>isGFR</name>
+    <name>renal_function.isGFR</name>
     <label>GFR</label>
   </checkmark>
   

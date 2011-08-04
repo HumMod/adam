@@ -17,6 +17,11 @@
       <val>0</val>
     </parm>
     
+    <parm>
+      <name>isGFR</name>
+      <val>false</val>
+    </parm>
+    
     <var>
       <name>mean_arterial_pressure</name>
       <val>30</val>
