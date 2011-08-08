@@ -81,7 +81,7 @@
     </showgraph>
   </groupbox>
   
-  <checkmark>
+<!--  <checkmark>
     <row>2.4</row>
     <col>1.0</col>
     <name>isRFC</name>
@@ -94,12 +94,12 @@
     <name>renal_function.isGFR</name>
     <label>GFR</label>
   </checkmark>
-  
+ 
   <radiobuttons>
     <row>2.0</row>
     <col>3.0</col>
     <name>index</name>
     <listname>common.kidney</listname>
     <label>Kidney Function</label>
-  </radiobuttons>
+  </radiobuttons>-->
 </panel>

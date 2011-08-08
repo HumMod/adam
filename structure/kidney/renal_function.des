@@ -17,16 +17,24 @@
       <val>0</val>
     </parm>
     
-    <parm>
-      <name>isGFR</name>
-      <val>false</val>
-    </parm>
-    
     <var>
       <name>mean_arterial_pressure</name>
       <val>30</val>
     </var>
     
+
+    <var>
+      <name>MAP_id </name>
+    </var>
+
+    <var>
+      <name> mn </name>
+    </var>
+
+    <var>
+      <name>bn </name>
+    </var>
+
     <var>
       <name>basic_urine_output</name>
     </var>
@@ -62,12 +70,23 @@
       <name>multiplier</name>
     </var>
 
+    <var>
+      <name>MAP_ideal </name>
+    </var>
+
+    <var>
+      <name>ideal_mult </name>
+    </var>
+
   </variables>
 
   <definitions>  
     <block>
       <name>dervs</name>
-      <def>
+
+
+
+   old   <def>
         <name>basic_urine_output</name>
         <val>excretion_rate * weight.real / 60</val>
       </def>
@@ -87,6 +106,20 @@
           </def>
         </false>
       </if>
+
+
+<if>
+<test> age.months LE 3 </test>
+  <true>
+     <def>
+        <name>MAP_ideal </name>
+        <val> 17 * age.months + 22 </val>
+      </def>
+   </true>
+  <false>
+   <def><name> MAP_ideal </name><val> 77 </val></def>
+  </false>
+</if>
       
       <def>
         <name>mean_arterial_pressure</name>
@@ -120,11 +153,20 @@
         <false>rfc_uo</false>
       </conditional>
       -->
+
+<def><name> ideal_mult </name><val> .2 + ( .25 / ( age.months ^ 2
+ ) ) </val></def>
+<def><name> bn </name><val> ( .489 * fluids.intake + ( 3.12 / 1440 ) )  </val></def>
+<def><name> mn </name><val> ( bn / ( ideal_mult * MAP_ideal ) )  </val></def>
+<def><name> urine_output </name><val> ( mn * ( mean_arterial_pressure - MAP_ideal ) + bn )  </val></def>
+
+
       
-      <def>
+   <!--   <def>
         <name>urine_output</name>
         <val>basic_urine_output * multiplier / baroreceptor_reflex.sympathetics</val>
-      </def>
+      </def>-->
+
     </block>
   </definitions>
   
