@@ -58,7 +58,7 @@
       
       <def>
         <name>ideal_cardiac_output</name>
-        <val>250 * weight.real</val>
+        <val>250 * weight.ideal</val>
       </def>
       
       <def>

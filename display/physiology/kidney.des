@@ -35,6 +35,13 @@
          <label>UO</label>
          <linecolor>RED</linecolor>
        </yvar>
+      <yvar>
+         <name>renal_function.bn</name>
+         <label>UO_id</label>
+         <linecolor>BLUE </linecolor>
+       </yvar>
+ 
+
      </yaxis>
    </showgraph>
 
@@ -58,6 +65,19 @@
        </yvar>
      </yaxis>
    </showgraph>
+
+  <showvalue>
+<row> 33 </row><col> 51 </col>
+<name> renal_function.a_n</name>
+<label> a_n </label>
+</showvalue>
+
+  <showvalue>
+<row> 34 </row><col> 51 </col>
+<name> renal_function.base_n </name>
+<label> base_n </label>
+</showvalue>
+
 
    <showgraph>
      <row>22</row>

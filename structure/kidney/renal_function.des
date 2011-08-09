@@ -78,6 +78,18 @@
       <name>ideal_mult </name>
     </var>
 
+    <var>
+      <name> a_n </name>
+    </var>
+
+    <var>
+      <name>base_n </name>
+    </var>
+
+    <var>
+      <name>id_urine </name>
+    </var>
+
   </variables>
 
   <definitions>  
@@ -113,11 +125,11 @@
   <true>
      <def>
         <name>MAP_ideal </name>
-        <val> 17 * age.months + 22 </val>
+        <val> 16 * age.months + 27 </val>
       </def>
    </true>
   <false>
-   <def><name> MAP_ideal </name><val> 77 </val></def>
+   <def><name> MAP_ideal </name><val> 75 </val></def>
   </false>
 </if>
       
@@ -140,6 +152,7 @@
         <name>multiplier</name>
         <val> 5 ^ ( adjusted_rpp + 35 / 100 - 1 )  - .75</val>
       </def>
+
    <!--   
       <def>
         <name>rfc_uo</name>
@@ -154,11 +167,13 @@
       </conditional>
       -->
 
-<def><name> ideal_mult </name><val> .2 + ( .25 / ( age.months ^ 2
- ) ) </val></def>
-<def><name> bn </name><val> ( .489 * fluids.intake + ( 3.12 / 1440 ) )  </val></def>
-<def><name> mn </name><val> ( bn / ( ideal_mult * MAP_ideal ) )  </val></def>
-<def><name> urine_output </name><val> ( mn * ( mean_arterial_pressure - MAP_ideal ) + bn )  </val></def>
+<def><name> ideal_mult </name><val> .8 - ( .25 / ( age.months ^ 5 ) ) </val></def>
+<def><name> bn </name><val> .479 * fluids.intake * 1 + .002167  </val></def>.489
+<def><name> mn </name><val> 5 ^ ( 1 / ( 1 - ideal_mult ) ) </val></def>
+<def><name> a_n </name><val> bn / mn  </val></def>
+<def><name> base_n </name><val> mn ^ ( 1 / MAP_ideal ) </val></def>
+<def><name> urine_output </name><val> a_n * ( base_n ^ mean_arterial_pressure )  MAX 0 </val></def>
+
 
 
       

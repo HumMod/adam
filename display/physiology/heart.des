@@ -47,6 +47,12 @@
 <label> set point</label>
 </showvalue>
 
+  <showvalue>
+<row> 38 </row><col> 1 </col>
+<name> System.X </name>
+<label>  system x</label>
+</showvalue>
+
 
     <showgraph>
       <row>1</row>
@@ -108,6 +114,12 @@
           <label>MAP</label>
           <linecolor>RED</linecolor>
         </yvar>
+        <yvar>
+          <name>renal_function.MAP_ideal </name>
+          <label>MAP_id</label>
+          <linecolor> BLUE </linecolor>
+        </yvar>
+
       </yaxis>
     </showgraph>
     

@@ -47,6 +47,8 @@
       <name> ideal_blood_volume </name>
    </var>
 
+  <var><name> insensible </name></var>
+
   </variables>
   
   <equations>
@@ -68,18 +70,19 @@
           <!-- 
             Multiplier is from 2.5 ounces of formula per pound of baby.
           -->
-          <val>162.65 * weight.ideal / 1440</val>
+          <val>.85 * 166 * weight.ideal / 1440</val>
         </def>
-        
+
+
         <def>
           <name>intake_urine_difference</name>
-          <val>intake - renal_function.urine_output</val>
+          <val>intake - renal_function.urine_output - ( .03167 * weight.real )</val>
         </def>
         
         <def>
           <name>distribution</name>
           <!-- ECF/ICF -->
-          <val>0.746367 - ( 0.00253 * age.months )</val>
+          <val>0.746367 - ( 0.00253 * ( age.days MIN 125 ) )</val>
         </def>
         
         <def>
@@ -99,13 +102,13 @@
         
         <def>
           <name>unstressed_blood_volume</name>
-          <val>80 * weight.ideal</val>
+          <val>58.1 * weight.ideal</val>
         </def>
 
         <def>
            <name> ideal_blood_volume </name>
-       <!--    <val> ( 1 / 3 ) * 750 * weight.real * distribution / ( 1 + distribution )</val>-->
-           <val> 115 * weight.real </val>
+         <val> 250 * weight.real * distribution / ( 1 + distribution )</val>
+<!--           <val> 83 * weight.real </val>>-->
         </def>
 
     </block>

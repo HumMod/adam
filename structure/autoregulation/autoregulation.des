@@ -59,12 +59,12 @@
       
       <def>
         <name>tpr_slope</name>
-        <val>1 / ( 12 * fluids.blood_volume )</val>
+        <val>1 / ( 12 * fluids.ideal_blood_volume )</val>
       </def>
       
       <def>
         <name>tpr_setpoint</name>
-        <val>fluids.blood_volume</val>
+        <val>fluids.ideal_blood_volume</val>
       </def>
       
       <def>
