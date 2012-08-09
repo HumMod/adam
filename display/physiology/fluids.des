@@ -25,7 +25,7 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
+        <name>time.Days</name>
         <label>Age</label>
       </xaxis>
       
@@ -57,7 +57,7 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
+        <name>time.Days</name>
         <label>Age</label>
       </xaxis>
       
@@ -84,7 +84,7 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
+        <name>time.Days</name>
         <label>Age</label>
       </xaxis>
       

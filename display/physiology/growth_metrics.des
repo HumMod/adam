@@ -31,11 +31,11 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
-        <label>Age (minutes)</label>
+        <name>time.Days</name>
+        <label>Age</label>
         <scale>
           <min>0</min>
-          <max>120</max>
+          <max>3</max>
         </scale>
       </xaxis>
       
@@ -45,6 +45,12 @@
           <label>Weight (kg)</label>
           <linecolor>RED</linecolor>
         </yvar>
+        <yvar>
+          <name>weight.calculated</name>
+          <label>Weight (kg)</label>
+          <linecolor>BLUE</linecolor>
+        </yvar>
+
         <scale>
           <min>4.5</min>
           <max>6.5</max>
@@ -60,7 +66,7 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
+        <name>time.Days</name>
         <label>Age (minutes)</label>
         <scale>
           <min>0</min>
@@ -89,7 +95,7 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
+        <name>time.Days</name>
         <label>Age (minutes)</label>
         <scale>
           <min>0</min>

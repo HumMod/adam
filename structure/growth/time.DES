@@ -1,0 +1,14 @@
+<structure>
+  <name>time</name>
+<variables>
+ <var><name> Days </name></var>
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+<def><name> Days </name><val> System.X / 1440 </val></def>
+</block>
+
+</definitions>
+
+</structure>

@@ -8,7 +8,7 @@
   <variables>
     
     <var>
-      <name>intake</name>
+      <name>intake</name><val> 0 </val>
     </var>
     
     <var>

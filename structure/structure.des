@@ -3,7 +3,8 @@
 -->
 
 <?path structure ?>
-
+<?include growth\time.des ?>
+<?include growth\energy.des ?>
 <?include growth\growth.des ?>
 <?include heart\heart.des ?>
 <?include fluids\fluids.des ?>
@@ -23,6 +24,8 @@
   
     <block>
       <name> dervs </name>
+      <call> time.Dervs </call>
+      <call> energy.dervs </call>
       <call>growth.dervs</call>
       <call>fluids.dervs</call>
       <call>baroreceptor_reflex.dervs</call>

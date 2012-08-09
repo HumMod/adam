@@ -49,8 +49,8 @@
 
   <showvalue>
 <row> 38 </row><col> 1 </col>
-<name> System.X </name>
-<label>  system x</label>
+<name> time.Days</name>
+<label>  Days </label>
 </showvalue>
 
 
@@ -62,8 +62,8 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
-        <label>Age (minutes)</label>
+        <name>time.Days</name>
+        <label>Age </label>
       </xaxis>
       
       <yaxis>
@@ -83,8 +83,8 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
-        <label>Age (minutes)</label>
+        <name>time.Days</name>
+        <label>time.Days</label>
       </xaxis>
       
       <yaxis>
@@ -104,8 +104,8 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
-        <label>Age (minutes)</label>
+        <name>time.Days</name>
+        <label> Age </label>
       </xaxis>
       
       <yaxis>
@@ -131,8 +131,8 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
-        <label>Age (minutes)</label>
+        <name>time.Days</name>
+        <label>Age </label>
       </xaxis>
       
       <yaxis>
@@ -152,8 +152,8 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
-        <label>Age (minutes)</label>
+        <name>time.Days</name>
+        <label>Age </label>
       </xaxis>
       
       <yaxis>
@@ -173,8 +173,8 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
-        <label>Age (minutes)</label>
+        <name>time.Days</name>
+        <label>Age </label>
       </xaxis>
       
       <yaxis>
@@ -194,8 +194,8 @@
       <leftmargin>10</leftmargin>
       
       <xaxis>
-        <name>System.X</name>
-        <label>Age (minutes)</label>
+        <name>time.Days</name>
+        <label>Age </label>
       </xaxis>
       
       <yaxis>

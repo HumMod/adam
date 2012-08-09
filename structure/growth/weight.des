@@ -22,9 +22,24 @@
     </var>
     
     <var>
-      <name>dry_percent</name>
+      <name>dry_percent</name><val> 0.26 </val>
     </var>
+
+    <var>
+      <name>calculated</name>
+    </var>
+
   </variables>
+
+  <equations>
+    <diffeq>
+      <name>calculated_weight </name>
+      <integralname>calculated_weight</integralname>
+      <initialval>4.5</initialval>
+      <dervname>dcalculated</dervname>
+      <errorlim>0.03</errorlim>
+    </diffeq>
+  </equations>
 
   <definitions>  
     
@@ -52,6 +67,13 @@
           <name>real</name>
           <val>dry + ( fluids.total_body_water / 1000 )</val>
         </def>
+
+  <def>
+   <name> dcalculated </name>
+  <val> energy.weight_gain </val></def>
+
+<def><name> calculated </name><val> calculated_weight + ( fluids.total_body_water / 1000 ) </val></def>
+
     </block>
     </definitions>
   

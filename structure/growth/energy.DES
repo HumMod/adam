@@ -1,0 +1,37 @@
+
+<structure>
+  <name>energy</name>
+  
+  <variables>
+ <parm><name> milk_cals </name><val> 25 </val></parm>
+  <var><name> metabolic_need/min </name></var>
+  <parm><name> need </name><val> 8.5 </val></parm><!-- ?????? this should represent the amount of calories needed per dry weight unit...-->
+  <var><name> intake </name></var>  
+  <var><name> weight_gain </name></var>  
+  <var><name> weight_effect </name></var>  
+
+  </variables>
+
+  <equations>
+    <diffeq>
+      <name>energy_excess</name>
+      <integralname>energy_excess</integralname>
+      <initialval>0</initialval>
+      <dervname>d_excess</dervname>
+      <errorlim>0.1</errorlim>
+    </diffeq>
+  </equations>
+
+
+<definitions>
+<block><name> dervs </name>
+ <def><name> metabolic_need/min </name><val> need * weight.calculated_weight </val></def>
+ <def><name> intake </name><val> fluids.intake * milk_cals </val></def>
+ <def><name> weight_gain </name><val> 0.001 * energy_excess / ( 4000 / weight.dry_percent ) </val></def>
+ <def><name> weight_effect </name><val> 0.001 * energy_excess </val></def>
+  <def><name> d_excess </name><val> intake - metabolic_need/min - weight_effect </val></def>
+</block>
+
+</definitions>
+
+</structure>
