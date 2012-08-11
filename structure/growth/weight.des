@@ -29,15 +29,23 @@
       <name>calculated</name>
     </var>
 
+    <var>
+      <name>actual_dry</name>
+    </var>
+
+    <var>
+      <name>fluid_weight</name>
+    </var>
+
   </variables>
 
   <equations>
     <diffeq>
       <name>calculated_weight </name>
       <integralname>calculated_weight</integralname>
-      <initialval>4.5</initialval>
+      <initialval>1.0</initialval>
       <dervname>dcalculated</dervname>
-      <errorlim>0.03</errorlim>
+      <errorlim>0.003</errorlim>
     </diffeq>
   </equations>
 
@@ -61,11 +69,16 @@
           <name>dry</name>
           <val>ideal * dry_percent</val>
         </def>
+
+       <def>
+	<name> fluid_weight </name>
+	<val> fluids.total_body_water / 1000 </val>
+      </def>
         
         <def>
           <!-- In kg -->
           <name>real</name>
-          <val>dry + ( fluids.total_body_water / 1000 )</val>
+          <val>dry + fluid_weight </val>
         </def>
 
   <def>
@@ -73,6 +86,7 @@
   <val> energy.weight_gain </val></def>
 
 <def><name> calculated </name><val> calculated_weight + ( fluids.total_body_water / 1000 ) </val></def>
+<def><name> actual_dry </name><val> calculated_weight / calculated </val></def>
 
     </block>
     </definitions>

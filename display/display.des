@@ -19,7 +19,7 @@
   <?include physiology\kidney.des ?>
   
   <common>
-    <displayfirst>kidney</displayfirst>
+    <displayfirst>growth_metrics</displayfirst>
   </common>
 </display>
   

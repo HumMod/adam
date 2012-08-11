@@ -70,13 +70,13 @@
           <!-- 
             Multiplier is from 2.5 ounces of formula per pound of baby.
           -->
-          <val>.85 * 166 * weight.ideal / 1440</val>
+          <val>.85 * 166 * weight.calculated / 1440</val>
         </def>
 
 
         <def>
           <name>intake_urine_difference</name>
-          <val>intake - renal_function.urine_output - ( .03167 * weight.real )</val>
+          <val>intake - renal_function.urine_output - ( .03167 * weight.calculated )</val>
         </def>
         
         <def>
