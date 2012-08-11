@@ -43,7 +43,7 @@
     <diffeq>
       <name>calculated_weight </name>
       <integralname>calculated_weight</integralname>
-      <initialval>1.0</initialval>
+      <initialval>1.2</initialval>
       <dervname>dcalculated</dervname>
       <errorlim>0.003</errorlim>
     </diffeq>

@@ -25,7 +25,7 @@
     </var>
     
     <var>
-      <name>months</name>
+      <name>months</name><val> 1 </val>
     </var>
   </variables>
 

@@ -153,20 +153,6 @@
         <val> 5 ^ ( adjusted_rpp + 35 / 100 - 1 )  - .75</val>
       </def>
 
-   <!--   
-      <def>
-        <name>rfc_uo</name>
-        <val>basic_urine_output * multiplier / baroreceptor_reflex.sympathetics</val>
-      </def>
-      
-      <conditional>
-        <name>urine_output</name>
-        <test>kidney_function.isGFR</test>
-        <true>gfr_uo</true>
-        <false>rfc_uo</false>
-      </conditional>
-      -->
-
 <def><name> ideal_mult </name><val> .8 - ( .25 / ( age.months ^ 5 ) ) </val></def>
 <def><name> bn </name><val> .479 * fluids.intake * 1 + .002167  </val></def>.489
 <def><name> mn </name><val> 5 ^ ( 1 / ( 1 - ideal_mult ) ) </val></def>
@@ -174,13 +160,6 @@
 <def><name> base_n </name><val> mn ^ ( 1 / MAP_ideal ) </val></def>
 <def><name> urine_output </name><val> a_n * ( base_n ^ mean_arterial_pressure )  MAX 0 </val></def>
 
-
-
-      
-   <!--   <def>
-        <name>urine_output</name>
-        <val>basic_urine_output * multiplier / baroreceptor_reflex.sympathetics</val>
-      </def>-->
 
     </block>
   </definitions>

@@ -9,6 +9,7 @@
   <var><name> intake </name></var>  
   <var><name> weight_gain </name></var>  
   <var><name> weight_effect </name></var>  
+  <var><name> ToWeightGain </name></var>  
 
   </variables>
 
@@ -25,10 +26,12 @@
 
 <definitions>
 <block><name> dervs </name>
+
+  <def><name> ToWeightGain </name><val> 0.001 + ( 0.0035 / ( age.months ^ .75 ) ) </val></def>
  <def><name> metabolic_need/min </name><val> ( 1 / 1.44 ) * LOG ( 0.6 * weight.calculated_weight ) </val></def>
  <def><name> intake </name><val> fluids.intake * milk_cals </val></def>
- <def><name> weight_gain </name><val> .01 * energy_excess / ( 2.2 * 4000 / weight.dry_percent ) </val></def>
- <def><name> weight_effect </name><val> .01 * energy_excess </val></def>
+ <def><name> weight_gain </name><val> ToWeightGain * energy_excess / ( 2.2 * 4000 / weight.dry_percent ) </val></def>
+ <def><name> weight_effect </name><val> ToWeightGain * energy_excess </val></def>
   <def><name> d_excess </name><val> intake - metabolic_need/min - weight_effect - ( 0.25 * ( energy_excess MAX 0 ) )</val></def>
 </block>
 
