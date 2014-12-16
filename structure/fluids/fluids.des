@@ -70,13 +70,13 @@
           <!-- 
             Multiplier is from 2.5 ounces of formula per pound of baby.
           -->
-          <val>.85 * 166 * weight.calculated / 1440</val>
+          <val>0.85 * 163 * weight.calculated / 1440</val>
         </def>
 
 
         <def>
           <name>intake_urine_difference</name>
-          <val>intake - renal_function.urine_output - ( .03167 * weight.calculated )</val>
+          <val>intake - renal_function.urine_output - ( .04 * weight.calculated )</val>0.03167
         </def>
         
         <def>
@@ -97,7 +97,7 @@
         
         <def>
           <name>blood_volume</name>
-          <val>0.33 * extracellular</val>
+          <val>0.33 * extracellular</val> 
         </def>
         
         <def>
@@ -112,7 +112,7 @@
         </def>
 
     </block>
-    
+    <!--
     <block>
       <name>fluid_adjustment</name>
       <def>
@@ -135,7 +135,7 @@
          <val>extracellular_adjusted</val>
        </def>
     </block>
-    
+    -->
   </definitions>
   
 </structure>

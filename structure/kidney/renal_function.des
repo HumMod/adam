@@ -21,7 +21,6 @@
       <name>mean_arterial_pressure</name>
       <val>30</val>
     </var>
-    
 
     <var>
       <name>MAP_id </name>
@@ -96,13 +95,11 @@
     <block>
       <name>dervs</name>
 
-
-
    old   <def>
         <name>basic_urine_output</name>
         <val>excretion_rate * weight.real / 60</val>
       </def>
-      
+ <!--     
       <if>
         <test>age.months LE 3.0</test>
         <true>
@@ -118,24 +115,14 @@
           </def>
         </false>
       </if>
+-->
 
+<def><name> age_shift </name><val> 24.5 MAX ( -12.5 * age.months + 62 ) </val></def>
+<def><name> MAP_ideal </name><val> ( 16 * age.months + 27  ) MIN 75 </val></def>
 
-<if>
-<test> age.months LE 3 </test>
-  <true>
-     <def>
-        <name>MAP_ideal </name>
-        <val> 16 * age.months + 27 </val>
-      </def>
-   </true>
-  <false>
-   <def><name> MAP_ideal </name><val> 75 </val></def>
-  </false>
-</if>
-      
       <def>
         <name>mean_arterial_pressure</name>
-        <val> 1. * heart.cardiac_output * autoregulation.total_peripheral_resistance + heart.right_atrial_pressure</val>
+        <val> heart.cardiac_output * autoregulation.total_peripheral_resistance + heart.right_atrial_pressure</val>
       </def>
       
       <def>
@@ -145,7 +132,7 @@
       
       <def>
         <name>adjusted_rpp</name>
-        <val>perfusion_pressure + age_shift + 0 </val>
+        <val>perfusion_pressure + age_shift  </val>
       </def>
       
       <def>
