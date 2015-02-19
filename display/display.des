@@ -6,7 +6,6 @@
 
 <display>
   <common>
-    <addarrowsnewline />
     
     <?include tree\tree.des ?>
     <?include common.des ?>

@@ -107,35 +107,11 @@
 
         <def>
            <name> ideal_blood_volume </name>
-         <val> 250 * weight.real * distribution / ( 1 + distribution )</val>
-<!--           <val> 83 * weight.real </val>>-->
+           <val> 250 * weight.real * distribution / ( 1 + distribution ) </val>
         </def>
 
     </block>
-    <!--
-    <block>
-      <name>fluid_adjustment</name>
-      <def>
-         <name>total_body_water_adjusted</name>
-         <val>750 * weight.real</val>
-       </def>
-       
-       <def>
-         <name>extracellular_adjusted</name>
-         <val>total_body_water_adjusted * 0.45</val>
-       </def>
-       
-       <def>
-         <name>intracellular_adjusted</name>
-         <val>total_body_water_adjusted - extracellular_adjusted</val>
-       </def>
-       
-       <def>
-         <name>extracellular</name>
-         <val>extracellular_adjusted</val>
-       </def>
-    </block>
-    -->
+
   </definitions>
   
 </structure>

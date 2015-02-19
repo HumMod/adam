@@ -6,75 +6,29 @@
   <name>renal_function</name>
   
   <variables>
+
+    <parm>
+      <name> mn </name>
+      <val> 10 </val>
+    </parm>
+
     <parm>
       <name>excretion_rate</name>
       <!-- In mL/hr -->
       <val>6.77</val>
     </parm>
-    
-    <parm>
-      <name>rpp_drop</name>
-      <val>0</val>
-    </parm>
-    
-    <var>
-      <name>mean_arterial_pressure</name>
-      <val>30</val>
-    </var>
-
-    <var>
-      <name>MAP_id </name>
-    </var>
-
-    <var>
-      <name> mn </name>
-    </var>
-
-    <var>
-      <name>bn </name>
-    </var>
-
-    <var>
-      <name>basic_urine_output</name>
-    </var>
-    
-    <var>
-      <name>urine_output</name>
-      <val>0</val>
-    </var>
-    
-    <var>
-      <name>rfc_uo</name>
-    </var>
-    
-    <var>
-      <name>gfr_uo</name>
-      <val>1</val>
-    </var>
-    
-    <var>
-      <name>age_shift</name>
-    </var>
-    
-    <var>
-      <name>perfusion_pressure</name>
-      <val>75</val>
-    </var>
-    
-    <var>
-      <name>adjusted_rpp</name>
-    </var>
-    
-    <var>
-      <name>multiplier</name>
-    </var>
 
     <var>
       <name>MAP_ideal </name>
     </var>
 
     <var>
-      <name>ideal_mult </name>
+      <name>mean_arterial_pressure</name>
+      <val>30</val>
+    </var>
+
+    <var>
+      <name>bn </name>
     </var>
 
     <var>
@@ -86,66 +40,31 @@
     </var>
 
     <var>
-      <name>id_urine </name>
+      <name>urine_output</name>
+      <val>0</val>
     </var>
-
+    
   </variables>
 
   <definitions>  
     <block>
       <name>dervs</name>
 
-   old   <def>
-        <name>basic_urine_output</name>
-        <val>excretion_rate * weight.real / 60</val>
-      </def>
- <!--     
-      <if>
-        <test>age.months LE 3.0</test>
-        <true>
-          <def>
-            <name>age_shift</name>
-            <val>-12.5 * age.months + 62</val>
-          </def>
-        </true>
-        <false>
-          <def>
-            <name>age_shift</name>
-            <val>24.5</val>
-          </def>
-        </false>
-      </if>
--->
 
-<def><name> age_shift </name><val> 24.5 MAX ( -12.5 * age.months + 62 ) </val></def>
-<def><name> MAP_ideal </name><val> ( 16 * age.months + 27  ) MIN 75 </val></def>
+     <def>
+        <name> MAP_ideal </name>
+        <val> ( 16 * age.months + 27  ) MIN 75 </val>
+      </def>
 
       <def>
         <name>mean_arterial_pressure</name>
         <val> heart.cardiac_output * autoregulation.total_peripheral_resistance + heart.right_atrial_pressure</val>
       </def>
-      
-      <def>
-        <name>perfusion_pressure</name>
-        <val>mean_arterial_pressure - rpp_drop</val>
-      </def>
-      
-      <def>
-        <name>adjusted_rpp</name>
-        <val>perfusion_pressure + age_shift  </val>
-      </def>
-      
-      <def>
-        <name>multiplier</name>
-        <val> 5 ^ ( adjusted_rpp + 35 / 100 - 1 )  - .75</val>
-      </def>
 
-<def><name> ideal_mult </name><val> .8 - ( .25 / ( age.months ^ 5 ) ) </val></def>
 <def><name> bn </name><val> .479 * fluids.intake * 1 + .002167  </val></def>.489
-<def><name> mn </name><val> 5 ^ ( 1 / ( 1 - ideal_mult ) ) </val></def>
 <def><name> a_n </name><val> bn / mn  </val></def>
 <def><name> base_n </name><val> mn ^ ( 1 / MAP_ideal ) </val></def>
-<def><name> urine_output </name><val> a_n * ( base_n ^ mean_arterial_pressure )  MAX 0 </val></def>
+<def><name> urine_output </name><val>  baroreceptor_reflex.sympathetics * a_n * ( base_n ^ mean_arterial_pressure )  MAX 0 </val></def>
 
 
     </block>

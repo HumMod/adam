@@ -1,0 +1,85 @@
+<script>
+
+<launch>
+  <solver> C:\Users\HL\Documents\Github\solver\Code\Model Solver.exe </solver>
+  <model> C:\Users\HL\Documents\Github\Adam\Model.DES </model>
+</launch>
+
+<restart/>
+
+<roster>
+ <var><name> System.X </name></var>
+ <var><name> autoregulation.total_peripheral_resistance </name></var>
+ <var><name> autoregulation.tpr_limit</name></var>
+ <var><name> autoregulation.tpr_slope </name></var>
+ <var><name> autoregulation.tpr_setpoint </name></var>
+ <var><name> baroreceptor_reflex.affna </name></var>
+ <var><name> baroreceptor_reflex.sympathetics </name></var>
+ <var><name> fluids.total_body_water </name></var>
+ <var><name> fluids.intake</name></var>
+ <var><name> fluids.distribution</name></var>
+ <var><name> fluids.extracellular</name></var>
+ <var><name> fluids.intracellular</name></var>
+ <var><name> fluids.blood_volume </name></var>
+ <var><name> fluids.ideal_blood_volume </name></var>
+ <var><name> fluids.unstressed_blood_volume </name></var>
+ <var><name> heart.cardiac_output</name></var>
+ <var><name> cardiac_output.plateau_multiplier</name></var>
+ <var><name> cardiac_output.setpoint</name></var>
+ <var><name> cardiac_output.ideal_cardiac_output</name></var>
+ <var><name> cardiac_output.plateau</name></var>
+ <var><name> heart.right_atrial_pressure</name></var>
+ <var><name> heart.stroke_volume</name></var>
+ <var><name> heart.mcfp_slope</name></var>
+ <var><name> heart.mean_circulatory_filling_pressure</name></var>
+ <var><name> heart.resistance_to_venous_return </name></var>
+ <var><name> blood_flow.blood_flow</name></var>
+ <var><name> renal_function.MAP_ideal </name></var>
+ <var><name> renal_function.mean_arterial_pressure </name></var>
+ <var><name> renal_function.bn</name></var>
+ <var><name> renal_function.a_n</name></var>
+ <var><name> renal_function.base_n </name></var>
+ <var><name> renal_function.urine_output </name></var>
+ <var><name> energy.energy_excess</name></var>
+ <var><name> energy.ToWeightGain</name></var>
+ <var><name> energy.metabolic_need/min</name></var>
+ <var><name> energy.energy_excess</name></var>
+ <var><name> growth.height</name></var>
+ <var><name> growth.body_surface_area </name></var>
+ <var><name> weight.calculated_weight</name></var>
+ <var><name> weight.ideal</name></var>
+ <var><name> weight.dry_percent</name></var>
+ <var><name> weight.dry </name></var>
+ <var><name> weight.real </name></var>
+</roster>
+
+<dumproster>
+  <filename> C:\Users\HL\Documents\Github\Adam\Data.txt  </filename>
+</dumproster>
+
+<restart/>
+
+<gofor>
+	<solutionint> 30 </solutionint>
+	<displayint> 1  </displayint>
+</gofor>
+
+<gofor>
+	<solutionint> 30 </solutionint>
+	<displayint> 1  </displayint>
+</gofor>
+<gofor>
+	<solutionint> 90 </solutionint>
+	<displayint> 1  </displayint>
+</gofor>
+<gofor>
+	<solutionint> 90 </solutionint>
+	<displayint> 1  </displayint>
+</gofor>
+<dumpsolution>
+  <filename> C:\Users\HL\Documents\Github\Adam\Data.txt  </filename>
+ <append/>
+</dumpsolution>
+
+<exit/>
+</script>

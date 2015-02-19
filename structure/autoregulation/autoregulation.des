@@ -43,7 +43,7 @@
       <integralname>basic_tpr</integralname>
       <initialval>0.0182</initialval>
       <dervname>change</dervname>
-      <errorlim>0.002</errorlim>
+      <errorlim>0.0002</errorlim>
     </diffeq>
   </equations>
   
@@ -78,7 +78,7 @@
       </def>
       
       <def>
-        <name>change</name>
+        <name>change</name> 
         <val>kauto * ( next_tpr - basic_tpr )</val>
       </def>
       
