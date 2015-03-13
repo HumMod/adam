@@ -8,7 +8,7 @@
   <variables>
     <parm>
       <name>kauto</name>
-      <val>0.00048</val>
+      <val>0.048</val>
     </parm>
     
     <var>
@@ -41,7 +41,7 @@
     <diffeq>
       <name>basic_tpr</name>
       <integralname>basic_tpr</integralname>
-      <initialval>0.073</initialval>
+      <initialval>0.0373</initialval>
       <dervname>change</dervname>
       <errorlim>0.0002</errorlim>
     </diffeq>
@@ -54,7 +54,7 @@
       
       <def>
         <name>tpr_limit</name>
-        <val> ( 0.08 / ( age.months ^ 2 ) ) +  0.06 </val>******** ( LOG10 ( age.months ) / age.months ) * 0.2 + 0.06 
+        <val>  ( LOG10 ( age.months ) / age.months ) * 0.2 + 0.06    </val> ********   ( 0.08 / ( age.months ^ 2 ) ) +  0.06  
       </def>
       
       <def>

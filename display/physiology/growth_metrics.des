@@ -86,9 +86,27 @@
           <linecolor>RED</linecolor>
         </yvar>-->
        <yvar>
+          <name>energy.intake</name>
+          <label>intake </label>
+          <linecolor>BLACK</linecolor>
+        </yvar>
+
+       <yvar>
           <name>energy.metabolic_need/min</name>
-          <label>energy excess </label>
+          <label> bmr  </label>
+          <linecolor>GREEN</linecolor>
+        </yvar>
+
+       <yvar>
+          <name>energy.activity/min</name>
+          <label> activity  </label>
           <linecolor>RED</linecolor>
+        </yvar>
+
+       <yvar>
+          <name>energy.weight_effect</name>
+          <label> weight gain </label>
+          <linecolor>BLUE</linecolor>
         </yvar>
          <scale>
           <min>0</min>

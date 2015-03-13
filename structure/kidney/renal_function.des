@@ -57,7 +57,7 @@
 
      <def>
         <name> MAP_ideal </name>
-        <val> ( 0.333 * age.months + 90  )  </val>
+        <val> ( 16 * age.months + 27  ) MIN 80  </val>
       </def>
 
 <def><name> partial </name><val>  heart.cardiac_output * autoregulation.total_peripheral_resistance </val></def>
@@ -66,7 +66,7 @@
         <val> heart.cardiac_output * autoregulation.total_peripheral_resistance + heart.right_atrial_pressure</val>
       </def>
 
-<def><name> bn </name><val> 0.0007 * fluids.blood_volume   </val></def>.489
+<def><name> bn </name><val> 0.0008 * fluids.blood_volume   </val></def>.489
 
 <def><name> a_n </name><val> bn / mn  </val></def>
 <def><name> base_n </name><val> mn ^ ( 1 / MAP_ideal ) </val></def>

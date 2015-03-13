@@ -67,10 +67,7 @@
       
         <def>
           <name>intake</name>
-          <!-- 
-            Multiplier is from 2.5 ounces of formula per pound of baby.
-          -->
-          <val>0.85 * 163 * weight.calculated / 1440</val>
+          <val> ( 170 * weight.calculated MIN 1200 ) / 1440  </val>
         </def>
 
         <def>

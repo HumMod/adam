@@ -3,7 +3,7 @@
   <name>energy</name>
   
   <variables>
- <parm><name> milk_cals </name><val> 20 </val></parm>
+ <parm><name> milk_cals </name><val> .66 </val></parm>
   <var><name> metabolic_need/min </name></var>
   <var><name> metabolic_need/day(MJ) </name></var>
  <parm><name> MJtokCal </name><val> 238.85  </val></parm>
@@ -13,6 +13,8 @@
   <var><name> weight_gain </name></var>  
   <var><name> weight_effect </name></var>  
   <var><name> ToWeightGain </name></var>  
+  <var><name> activity </name></var>  
+  <var><name> activity/min </name></var>  
 
   </variables>
 
@@ -31,17 +33,18 @@
 <block><name> dervs </name>
   <def><name> ToWeightGain </name><val> 0.003 </val></def>
 
-  <def><name> ToWeightGain </name><val> 0.001 + ( 0.0035 / ( age.months ^ .75 ) ) </val></def>
-
- <def><name> metabolic_need/min </name><val> ( 1 / 1.44 ) * LOG10 ( 0.6 * weight.calculated_weight ) </val></def>
+  <def><name> ToWeightGain </name><val> .0001  </val></def>  0.001 + ( 0.0035 / ( age.months ^ .75 ) ) 
 
  <def><name> metabolic_need/day(MJ) </name><val> 0.249 * weight.calculated - 0.127 </val></def>
- <def><name> metabolic_need/min </name><val> metabolic_need/day(MJ) / ( MJtokCal * 1440 )  </val></def>
+ <def><name> metabolic_need/min </name><val> metabolic_need/day(MJ) * MJtokCal / 1440  </val></def>
 
 
- <def><name> intake </name><val> fluids.intake * milk_cals </val></def>
- <def><name> weight_gain </name><val> ToWeightGain * energy_excess / ( 2.2 * 4000 / weight.dry_percent ) </val></def>
+ <def><name> intake </name><val> fluids.intake * milk_cals </val></def> <!-- in mL-->
  <def><name> weight_effect </name><val> ToWeightGain * energy_excess </val></def>
+<def><name> activity </name><val> 19 * weight.calculated </val></def>
+<def><name> activity/min </name><val> activity / 1440 </val></def>
+ <def><name> weight_effect </name><val> ( intake - metabolic_need/min - activity/min ) </val></def>
+ <def><name> weight_gain </name><val> ( intake - metabolic_need/min - activity/min ) / ( 2.2 * 4000 / weight.dry_percent ) </val></def>
   <def><name> d_excess </name><val> intake - metabolic_need/min - weight_effect - ( 0.25 * ( energy_excess MAX 0 ) )</val></def>
 </block>
 
