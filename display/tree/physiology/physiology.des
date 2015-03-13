@@ -29,3 +29,9 @@
   <label>Kidney</label>
   <parent>physiology</parent>
 </leaf>
+
+<leaf>
+  <name> Autonomics </name>
+  <label> Autonomics </label>
+  <parent>physiology</parent>
+</leaf>

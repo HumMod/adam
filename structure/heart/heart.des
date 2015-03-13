@@ -13,7 +13,7 @@
     
     <var>
       <name>heart_rate</name>
-      <val>150</val>
+      <val>147</val>
     </var>
     
     <var>
@@ -70,11 +70,16 @@
           <val>cardiac_output.cardiac_output</val>
         </def>
         
+       <def>
+         <name> heart_rate </name>
+         <val> 147 - age.months </val>
+       </def>
+
         <def>
           <name>right_atrial_pressure</name>
           <val>cardiac_output.right_atrial_pressure</val>
         </def>
-        
+
         <def>
           <name>stroke_volume</name>
           <val>cardiac_output / heart_rate</val>
@@ -92,7 +97,7 @@
         
         <def>
           <name>resistance_to_venous_return</name>
-          <val>0.04667 * autoregulation.total_peripheral_resistance  + 0.003168</val>
+          <val>0.05 * autoregulation.total_peripheral_resistance  + 0.0022</val>0.04667,0.003168 (0.47,0.003)
         </def>
     </block>
     </definitions>

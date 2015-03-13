@@ -16,7 +16,8 @@
   <?include physiology\heart.des ?>
   <?include physiology\fluids.des ?>
   <?include physiology\kidney.des ?>
-  
+  <?include physiology\Autonomics.des ?>
+
   <common>
     <displayfirst>growth_metrics</displayfirst>
   </common>

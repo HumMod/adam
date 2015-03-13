@@ -55,7 +55,7 @@
     <diffeq>
       <name>total_body_water</name>
       <integralname>total_body_water</integralname>
-      <initialval>3500</initialval>
+      <initialval>3400</initialval>3500
       <dervname>intake_urine_difference</dervname>
       <errorlim>1</errorlim>
     </diffeq>
@@ -73,7 +73,6 @@
           <val>0.85 * 163 * weight.calculated / 1440</val>
         </def>
 
-
         <def>
           <name>intake_urine_difference</name>
           <val>intake - renal_function.urine_output - ( .04 * weight.calculated )</val>0.03167
@@ -82,7 +81,7 @@
         <def>
           <name>distribution</name>
           <!-- ECF/ICF -->
-          <val>0.746367 - ( 0.00253 * ( age.days MIN 125 ) )</val>
+          <val> 0.746367 - ( 0.00253 * ( age.days MIN 125 ) )</val>
         </def>
         
         <def>
@@ -102,12 +101,12 @@
         
         <def>
           <name>unstressed_blood_volume</name>
-          <val>58.1 * weight.ideal</val>
+          <val>  55.1 * weight.ideal </val> 
         </def>
 
         <def>
            <name> ideal_blood_volume </name>
-           <val> 250 * weight.real * distribution / ( 1 + distribution ) </val>
+           <val> 58.2 * weight.calculated + 142 </val>250 * weight.calculated * distribution / ( 1 + distribution ) 
         </def>
 
     </block>

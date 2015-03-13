@@ -40,6 +40,10 @@
     </var>
 
     <var>
+      <name> partial </name>
+   </var>
+
+    <var>
       <name>urine_output</name>
       <val>0</val>
     </var>
@@ -53,15 +57,17 @@
 
      <def>
         <name> MAP_ideal </name>
-        <val> ( 16 * age.months + 27  ) MIN 75 </val>
+        <val> ( 0.333 * age.months + 90  )  </val>
       </def>
 
+<def><name> partial </name><val>  heart.cardiac_output * autoregulation.total_peripheral_resistance </val></def>
       <def>
         <name>mean_arterial_pressure</name>
         <val> heart.cardiac_output * autoregulation.total_peripheral_resistance + heart.right_atrial_pressure</val>
       </def>
 
-<def><name> bn </name><val> .479 * fluids.intake * 1 + .002167  </val></def>.489
+<def><name> bn </name><val> 0.0007 * fluids.blood_volume   </val></def>.489
+
 <def><name> a_n </name><val> bn / mn  </val></def>
 <def><name> base_n </name><val> mn ^ ( 1 / MAP_ideal ) </val></def>
 <def><name> urine_output </name><val>  baroreceptor_reflex.sympathetics * a_n * ( base_n ^ mean_arterial_pressure )  MAX 0 </val></def>

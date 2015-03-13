@@ -37,7 +37,8 @@
      <def>
         <!-- In m^2 -->
         <name> body_surface_area </name>
-        <val> ( 240 * ( weight.real ^ 0.53 ) * ( ( height * 2.54 ) ^ 0.4 ) ) / 10000 </val>
+<!--        <val> ( 240 * ( weight.real ^ 0.53 ) * ( ( height * 2.54 ) ^ 0.4 ) ) / 10000 </val>-->
+         <val> 71.85 * ( weight.real ^ .425 ) * ( height ^ .725 ) / 1000 </val>
       </def>
     </block>
     </definitions>

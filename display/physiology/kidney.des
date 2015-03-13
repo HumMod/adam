@@ -57,6 +57,23 @@
     <label> base_n </label>
   </showvalue>
 
+  <showvalue>
+    <row> 35 </row><col> 51 </col>
+    <name>energy.ToWeightGain </name>
+    <label> to weight gain</label>
+  </showvalue>
+
+  <showvalue>
+    <row> 36 </row><col> 51 </col>
+    <name>energy.metabolic_need/min </name>
+    <label>met need</label>
+  </showvalue>
+
+  <showvalue>
+    <row> 36 </row><col> 51 </col>
+    <name>energy.intake </name>
+    <label> intake </label>
+  </showvalue>
 
    <showgraph>
      <row>22</row>

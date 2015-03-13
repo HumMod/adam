@@ -68,11 +68,42 @@
           <linecolor>RED</linecolor>
         </yvar>
         <yvar>
-          <name>fluids.unstressed_blood_volume</name>
-          <label>V0</label>
-          <linecolor> BLACK </linecolor>
+          <name>fluids.ideal_blood_volume</name>
+          <label>BV</label>
+          <linetype> DASH </linetype>
+          <linecolor>RED</linecolor>
         </yvar>
+        <yvar>
+          <name>fluids.unstressed_blood_volume</name>
+          <label>BV0</label>
+          <linecolor>BLUE</linecolor>
+        </yvar>
+      </yaxis>
+    </showgraph>
 
+    <showgraph>
+      <row>11</row>
+      <col> 41</col>
+      <high>10</high>
+      <wide>40</wide>
+      <leftmargin>10</leftmargin>
+      
+      <xaxis>
+        <name>time.Days</name>
+        <label>Age</label>
+      </xaxis>
+      
+      <yaxis>
+ <!--       <yvar>
+          <name> heart.cardiac_output </name>
+          <label> CO </label>
+          <linecolor>RED</linecolor>
+        </yvar>-->
+        <yvar>
+          <name> heart.resistance_to_venous_return </name>
+          <label> tpr </label>
+          <linecolor> BLUE</linecolor>
+        </yvar>
       </yaxis>
     </showgraph>
     

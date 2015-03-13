@@ -37,7 +37,7 @@
       <!-- Need to look at flipping this around to work on RAP instead. -->
       <name>cardiac_output</name>
       <startname>cardiac_output</startname>
-      <initialval>1000</initialval>
+      <initialval>1247</initialval>
       <endname>co_end</endname>
       <errorlim>.01</errorlim>
     </impliciteq>
@@ -48,12 +48,13 @@
       <name>dervs</name>
       <def>
         <name>plateau_multiplier</name>
-        <val>1.2 * ( age.months ^ 1.5 ) / ( age.months ^ 1.5 + 18.49 ) + 1</val>
+        <val>1.2 * ( age.months ^ 1.5 ) / ( age.months ^ 1.5 + 18.49 ) + 1 </val>
       </def>
       
       <def>
         <name>setpoint</name>
-        <val>2.09 * ( age.months ^ 3.3 ) / ( age.months ^ 3.3 + 49 ) + 2</val>
+<!--        <val>2.09 * ( age.months ^ 3.3 ) / ( age.months ^ 3.3 + 49 ) + 2</val>-->
+    <val> 2.85 </val>
       </def>
       
       <def>
