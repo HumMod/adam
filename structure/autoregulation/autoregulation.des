@@ -8,7 +8,7 @@
   <variables>
     <parm>
       <name>kauto</name>
-      <val>0.048</val>
+      <val>0.048</val>0.048
     </parm>
     
     <var>
@@ -41,7 +41,7 @@
     <diffeq>
       <name>basic_tpr</name>
       <integralname>basic_tpr</integralname>
-      <initialval>0.0373</initialval>
+      <initialval>0.0373 </initialval>373
       <dervname>change</dervname>
       <errorlim>0.0002</errorlim>
     </diffeq>
@@ -59,7 +59,7 @@
       
       <def>
         <name>tpr_slope</name>
-        <val> 0.1</val>
+        <val> 0.25</val>
       </def>
       
       <def>

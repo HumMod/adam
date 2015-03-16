@@ -36,8 +36,8 @@
          <linecolor>RED</linecolor>
        </yvar>
       <yvar>
-         <name>renal_function.bn</name>
-         <label>UO_id</label>
+         <name> fluids.intake</name>
+         <label> intake </label>
          <linecolor>BLUE </linecolor>
        </yvar>
  

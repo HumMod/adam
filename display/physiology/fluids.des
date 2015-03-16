@@ -100,8 +100,8 @@
           <linecolor>RED</linecolor>
         </yvar>-->
         <yvar>
-          <name> heart.resistance_to_venous_return </name>
-          <label> tpr </label>
+          <name> autoregulation.tpr_limit </name>
+          <label> tpr limit </label>
           <linecolor> BLUE</linecolor>
         </yvar>
       </yaxis>
