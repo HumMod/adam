@@ -12,12 +12,6 @@
       <val> 10 </val>
     </parm>
 
-    <parm>
-      <name>excretion_rate</name>
-      <!-- In mL/hr -->
-      <val>6.77</val>
-    </parm>
-
     <var>
       <name>MAP_ideal </name>
     </var>
@@ -66,7 +60,7 @@
         <val> heart.cardiac_output * autoregulation.total_peripheral_resistance + heart.right_atrial_pressure</val>
       </def>
 
-<def><name> bn </name><val> 0.0008 * fluids.blood_volume   </val></def>.489
+<def><name> bn </name><val> 0.0008 * fluids.blood_volume   </val></def>0.0008
 
 <def><name> a_n </name><val> bn / mn  </val></def>
 <def><name> base_n </name><val> mn ^ ( 1 / MAP_ideal ) </val></def>
