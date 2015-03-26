@@ -18,10 +18,12 @@
 
     <var>
       <name>minutes</name>
+      <val> 43200 </val>
     </var>
     
     <var>
       <name>days</name>
+      <val> 30 </val>
     </var>
     
     <var>

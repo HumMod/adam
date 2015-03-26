@@ -24,9 +24,10 @@
       <name>tpr_limit</name>
     </var>
     
-    <var>
+    <parm>
       <name>tpr_slope</name>
-    </var>
+      <val> 0.1 </val>
+    </parm>
     
     <var>
       <name>tpr_setpoint</name>
@@ -35,6 +36,8 @@
     <var>
       <name>co_to_tpr</name>
     </var>
+
+   
   </variables>
   
   <equations>
@@ -54,12 +57,12 @@
       
       <def>
         <name>tpr_limit</name>
-        <val>  ( LOG10 ( age.months ) / age.months ) * 0.2 + 0.06      </val>  ********   ( 0.08 / ( age.months ^ 2 ) ) +  0.06  
+        <val>  ( LOG10 ( age.months + 1 ) / ( age.months ) ) * 0.2 + 0.06      </val>  ********   ( 0.08 / ( age.months ^ 2 ) ) +  0.06  
       </def>
       
       <def>
         <name>tpr_slope</name>
-        <val> 0.25</val>
+        <val> 0.025</val>
       </def>
       
       <def>

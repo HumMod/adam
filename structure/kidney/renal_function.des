@@ -21,9 +21,10 @@
       <val>30</val>
     </var>
 
-    <var>
+    <parm>
       <name>bn </name>
-    </var>
+      <val> 0.0008 </val>
+    </parm>
 
     <var>
       <name> a_n </name>
@@ -60,9 +61,7 @@
         <val> heart.cardiac_output * autoregulation.total_peripheral_resistance + heart.right_atrial_pressure</val>
       </def>
 
-<def><name> bn </name><val> 0.0008 * fluids.blood_volume   </val></def>0.0008
-
-<def><name> a_n </name><val> bn / mn  </val></def>
+<def><name> a_n </name><val> bn * fluids.blood_volume  / mn  </val></def>
 <def><name> base_n </name><val> mn ^ ( 1 / MAP_ideal ) </val></def>
 <def><name> urine_output </name><val>  baroreceptor_reflex.sympathetics * a_n * ( base_n ^ mean_arterial_pressure )  MAX 0 </val></def>
 

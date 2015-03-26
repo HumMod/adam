@@ -43,6 +43,21 @@
       <name>mcfp_slope</name>
     </var>
     
+   <parm>
+      <name> mcfp_b </name>
+      <val> 0.35 </val>
+   </parm>
+
+   <parm>
+      <name> rvr_m </name>
+      <val> 0.05 </val>
+   </parm>
+
+   <parm>
+      <name> rvr_b </name>
+      <val> 0.0022 </val>
+   </parm>
+
     <var>
       <name>heart_strength</name>
     </var>
@@ -82,7 +97,7 @@
         
         <def>
           <name>mcfp_slope</name>
-          <val>7 / ( 0.35 * fluids.ideal_blood_volume ) * baroreceptor_reflex.sympathetics</val>
+          <val>7 / ( mcfp_b * fluids.ideal_blood_volume ) * baroreceptor_reflex.sympathetics</val>
         </def>
         
         <def>

@@ -6,7 +6,7 @@
   <name>cardiac_output</name>
   
   <variables>
-  
+    
     <var>
       <name>plateau_multiplier</name>
     </var>
@@ -17,15 +17,22 @@
     
     <var>
       <name>plateau</name>
+      <val> 1 </val>
     </var>
     
     <var>
       <name>starling_curve</name>
     </var>
     
-    <var>
+    <parm>
       <name>setpoint</name>
-    </var>
+      <val> 2.85 </val>
+    </parm>
+
+    <parm>
+      <name> Starling_m </name>
+      <val> 1.86 </val>
+    </parm>
     
     <var>
       <name>right_atrial_pressure</name>
@@ -48,14 +55,15 @@
       <name>dervs</name>
       <def>
         <name>plateau_multiplier</name>
-        <val>1.2 * ( age.months ^ 1.5 ) / ( age.months ^ 1.5 + 18.49 ) + 1 </val>
+        <val>1.2 * ( age.months ^ 1.5 ) / ( ( age.months ^ 1.5 ) + ( 7 ^ 1.5 ) ) + 1 </val>
       </def>
       
+<!--
       <def>
         <name>setpoint</name>
-<!--        <val>2.09 * ( age.months ^ 3.3 ) / ( age.months ^ 3.3 + 49 ) + 2</val>-->
-    <val> 2.85 </val>
+        <val>2.09 * ( age.months ^ 3.3 ) / ( age.months ^ 3.3 + 49 ) + 2</val>
       </def>
+-->
       
       <def>
         <name>ideal_cardiac_output</name>
@@ -80,7 +88,7 @@
 	<name> co_end </name>
 	<test> right_atrial_pressure GE -4 </test>
 	<true>
-	                  plateau * ( ( right_atrial_pressure + 4 ) ^ 1.86 ) / ( ( ( right_atrial_pressure + 4 ) ^ 1.86 ) + ( setpoint ^ 1.86 )  )
+	                  plateau * ( ( right_atrial_pressure + 4 ) ^ Starling_m ) / ( ( ( right_atrial_pressure + 4 ) ^ Starling_m ) + ( setpoint ^ Starling_m )  )
 	        </true>
 	<false>
 	        0

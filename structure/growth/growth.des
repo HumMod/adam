@@ -2,10 +2,6 @@
   structure/growth/growth.des
 -->
 
-<?path structure\growth ?>
-
-<?include age.des ?>
-<?include weight.des ?>
 
 <structure>
   <name>growth</name>
@@ -25,8 +21,7 @@
     <block>
       <name>dervs</name>
     
-      <call>age.dervs</call>
-      <call>weight.dervs</call>
+
       
       <def>
         <!-- In in -->

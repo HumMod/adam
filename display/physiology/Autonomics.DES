@@ -1,0 +1,45 @@
+
+
+
+<panel>
+  <name> Autonomics </name>
+  
+  <showpanelname>
+    <row>0.5</row>
+    <col>1.0</col>
+  </showpanelname>
+  
+  <groupbox>
+    <row>2.0</row>
+    <col>2.0</col>
+    <high>44.0</high>
+    <wide>95.0</wide>
+    <title> Autonomics </title>
+    
+    <showgraph>
+      <row>1</row>
+      <col>1</col>
+      <high>10</high>
+      <wide>40</wide>
+      <leftmargin>10</leftmargin>
+      
+      <xaxis>
+        <name>time.Days</name>
+        <label>Age </label>
+      </xaxis>
+      <yaxis>
+        <yvar>
+          <name> baroreceptor_reflex.affna </name>
+          <label> Afferents </label>
+          <linecolor> BLUE </linecolor>
+        </yvar>
+        <yvar>
+          <name> baroreceptor_reflex.sympathetics </name>
+          <label> Symps </label>
+          <linecolor>RED</linecolor>
+        </yvar>
+      </yaxis>
+    </showgraph>
+
+</groupbox>
+</panel>

@@ -1,0 +1,49 @@
+<script>
+
+
+<launch>
+	<solver> C:\Users\HL\Documents\Github\solver\Code\Model Solver.EXE </solver>
+	<model>C:\Users\HL\Documents\Github\Adam\model.DES </model>
+</launch>
+<restart/>
+
+<skipaheadonerror/>
+<scramble/>
+
+<roster>
+	<var><name>  cardiac_output.cardiac_output </name><format> 3 </format></var>
+	<var><name> cardiac_output.right_atrial_pressure </name><format> 3 </format></var>
+	<var><name> heart.mean_circulatory_filling_pressure </name><format> 3 </format></var>
+	<var><name> renal_function.mean_arterial_pressure </name><format> 1 </format></var>
+	<var><name> fluids.blood_volume </name><format> 1 </format></var>
+</roster>
+
+insertchanges
+
+<gofor>
+	<solutionint> 10.0 </solutionint>
+	<displayint> 10 </displayint>
+</gofor>
+
+<gofor>
+	<solutionint> 259200.0 </solutionint>
+	<displayint> 7200 </displayint>
+</gofor>
+
+<dumppoint>
+  <filename> working.txt </filename>
+</dumppoint>
+
+<gofor>
+	<solutionint> 259200.0 </solutionint>
+	<displayint> 7200 </displayint>
+</gofor>
+
+<dumppoint>
+  <filename> working.txt </filename>
+  <append/>
+</dumppoint><exit/>
+
+
+<exit/>
+</script>
