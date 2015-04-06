@@ -45,17 +45,17 @@
     
    <parm>
       <name> mcfp_b </name>
-      <val> 0.35 </val>
+      <val> 0.337 </val>
    </parm>
 
    <parm>
       <name> rvr_m </name>
-      <val> 0.05 </val>
+      <val> 0.04 </val>
    </parm>
 
    <parm>
       <name> rvr_b </name>
-      <val> 0.0022 </val>
+      <val> 0.004 </val>
    </parm>
 
     <var>
