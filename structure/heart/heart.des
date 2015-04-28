@@ -97,7 +97,7 @@
         
         <def>
           <name>mcfp_slope</name>
-          <val>7 / ( mcfp_b * fluids.ideal_blood_volume ) * baroreceptor_reflex.sympathetics</val>
+          <val>7 / ( mcfp_b * fluids.ideal_blood_volume )</val>
         </def>
         
         <def>

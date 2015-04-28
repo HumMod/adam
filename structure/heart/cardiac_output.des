@@ -58,13 +58,6 @@
         <val>1.2 * ( age.months ^ 1.5 ) / ( ( age.months ^ 1.5 ) + ( 7 ^ 1.5 ) ) + 1 </val>
       </def>
       
-<!--
-      <def>
-        <name>setpoint</name>
-        <val>2.09 * ( age.months ^ 3.3 ) / ( age.months ^ 3.3 + 49 ) + 2</val>
-      </def>
--->
-      
       <def>
         <name>ideal_cardiac_output</name>
         <val>250 * weight.calculated</val>

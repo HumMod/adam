@@ -67,7 +67,7 @@
       
       <def>
         <name>tpr_setpoint</name>
-        <val>fluids.ideal_blood_volume</val>ideal
+        <val>fluids.ideal_blood_volume</val>
       </def>
       
       <def>

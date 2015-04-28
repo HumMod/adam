@@ -40,7 +40,8 @@
 
 
  <def><name> intake </name><val> fluids.intake * milk_cals </val></def> <!-- in mL-->
- <def><name> weight_effect </name><val> ToWeightGain * energy_excess </val></def>
+ 
+<def><name> weight_effect </name><val> ToWeightGain * energy_excess </val></def>
 <def><name> activity </name><val> 19 * weight.calculated </val></def>
 <def><name> activity/min </name><val> activity / 1440 </val></def>
  <def><name> weight_effect </name><val> ( intake - metabolic_need/min - activity/min ) </val></def>

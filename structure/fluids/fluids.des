@@ -103,7 +103,7 @@
 
         <def>
            <name> ideal_blood_volume </name>
-           <val> 58.2 * weight.calculated + 142 </val>250 * weight.calculated * distribution / ( 1 + distribution ) 
+           <val> 58.2 * weight.calculated + 142 </val>
         </def>
 
     </block>
